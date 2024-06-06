@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Citas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://conteudo.imguol.com.br/c/entretenimento/3e/2020/04/28/medica-fechando-portas-1588082119801_v2_450x450.jpg'); /* Reemplaza esta URL con la URL real de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Great Vibes', cursive;
+        }
+        .bootstrap-wrapper {
+            background-color: rgba(210, 243, 182, 0.8); /* Opcional: Para hacer un fondo blanco semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Administración de Médicos</h1>
+                <form>
+                    <br>
+                    <table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
+                        <ng-container matColumnDef="id">
+                            <th mat-headet-cell *matHeaderCellDef> ID </th>
+                            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="colegiado">
+                            <th mat-headet-cell *matHeaderCellDef> COLEGIADO </th>
+                            <td mat-cell *matCellDef="let element"> {{element.colegiado}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="nombre_completo">
+                            <th mat-headet-cell *matHeaderCellDef> NOMBRE </th>
+                            <td mat-cell *matCellDef="let element"> {{element.nombre_completo}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="especialidad">
+                            <th mat-headet-cell *matHeaderCellDef> ESPECIALIDAD </th>
+                            <td mat-cell *matCellDef="let element"> {{element.especialidad}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="edad">
+                            <th mat-headet-cell *matHeaderCellDef> EDAD</th>
+                            <td mat-cell *matCellDef="let element"> {{element.edad}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef = "displayColumn"></tr>
+                        <tr mat-row *matRowDef = "let row; columns: displayColumn;"></tr>
+
+                    </table>
+                    <br>
+                    <br>
+                    <div class="container text-center">
+                        <button routerLink="/registro_medico" mat-raised-button color="primary">Registrar Médico</button>
+                        <button routerLink="/editar_medico" style="margin-left:20px;" mat-raised-button color="primary">Editar Médico</button>
+                        <button routerLink="/eliminar_medico" style="margin-left:20px;" mat-raised-button color="primary">Eliminar Médico</button>
+                    </div>
+
+                </form>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

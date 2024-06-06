@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Citas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://promais.med.br/wp-content/uploads/2021/05/promais-a-clinica-com-profissionais-especializados-em-diversas-areas-medicas.jpg'); /* Reemplaza esta URL con la URL real de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Great Vibes', cursive;
+        }
+        .bootstrap-wrapper {
+            background-color: rgba(111, 183, 151, 0.8); /* Opcional: Para hacer un fondo blanco semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Registro de Médico</h1>
+                <form (ngSubmit) = "formSubmit()">
+                    <div class="text-center">
+                    <mat-form-field class="width-50"  appearance="outline">
+                        <mat-label>Colegiado</mat-label>
+                        <input type="text" [(ngModel)] = "medico.colegiado" name="colegiado" matInput placeholder="Ingrese el número de colegiado" style="color:black;">
+                    </mat-form-field>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                    <mat-form-field class="width-50"  appearance="outline">
+                        <mat-label>Nombre Completo</mat-label>
+                        <input type="text" [(ngModel)] = "medico.nombre_completo" name="nombre_completo"  matInput placeholder="Ingrese un nombre" style="color:black;">
+                    </mat-form-field>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <mat-form-field class="width-50" appearance="outline">
+                            <mat-label>Especialidad</mat-label>
+                            <input type="text" [(ngModel)] = "medico.especialidad" name="especialidad"  matInput placeholder="Ingrese la Especialidad" style="color:black;">
+                        </mat-form-field>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <mat-form-field class="width-50" appearance="outline">
+                            <mat-label>Fecha de Registro</mat-label>
+                            <input type="text" [(ngModel)] = "medico.fecha_registro" name="fecha_registro"  matInput placeholder="Ingrese la fecha de registro" style="color:black;">
+                        </mat-form-field>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <mat-form-field class="width-50" appearance="outline">
+                            <mat-label>Dirección</mat-label>
+                            <input type="text" [(ngModel)] = "medico.direccion" name="direccion"  matInput placeholder="Ingrese su direccion" style="color:black;">
+                        </mat-form-field>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <mat-form-field class="width-50" appearance="outline">
+                            <mat-label>Centro Hospitalario</mat-label>
+                            <input type="text" [(ngModel)] = "medico.centro_hospitalario" name="rol"  matInput placeholder="Ingrese el centro hospitalario" style="color:black;">
+                        </mat-form-field>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <mat-form-field class="width-50" appearance="outline">
+                            <mat-label>Edad</mat-label>
+                            <input type="text" [(ngModel)] = "medico.edad" name="edad"  matInput placeholder="Ingrese la edad" style="color:black;">
+                        </mat-form-field>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <mat-form-field class="width-50" appearance="outline">
+                            <mat-label>Observación</mat-label>
+                            <input type="text" [(ngModel)] = "medico.observacion" name="observacion"  matInput placeholder="Ingrese una Observación" style="color:black;">
+                        </mat-form-field>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="container text-center">
+                        <button mat-raised-button color="primary">Registrar Médico</button>
+                    </div>
+                </form>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

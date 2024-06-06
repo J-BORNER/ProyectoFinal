@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>///////////////////////</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://www.genesiscare.com/adobe/dynamicmedia/deliver/dm-aid--291a9f50-b4ed-4c1f-8960-0cca1e16f9b6/istock-1091766006.jpg?quality=100&&preferwebp=true'); /* Reemplaza esta URL con la URL real de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Great Vibes', cursive;
+        }
+        .bootstrap-wrapper {
+            background-color: rgba(136, 215, 210, 0.8); /* Opcional: Para hacer un fondo blanco semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Administración de Citas</h1>
+                <form>
+                    <br>
+                    <table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
+                        <ng-container matColumnDef="id">
+                            <th mat-headet-cell *matHeaderCellDef> ID </th>
+                            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="fechayhora">
+                            <th mat-headet-cell *matHeaderCellDef> FECHA Y HORA </th>
+                            <td mat-cell *matCellDef="let element"> {{element.fechayhora}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="paciente_id">
+                            <th mat-headet-cell *matHeaderCellDef> PACIENTE </th>
+                            <td mat-cell *matCellDef="let element"> {{element.paciente_id}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="medico_id">
+                            <th mat-headet-cell *matHeaderCellDef> MEDICO </th>
+                            <td mat-cell *matCellDef="let element"> {{element.medico_id}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef = "displayColumn"></tr>
+                        <tr mat-row *matRowDef = "let row; columns: displayColumn;"></tr>
+
+                    </table>
+                    <br>
+                    <br>
+                    <div class="container text-center">
+                        <button routerLink="/registro_cita" mat-raised-button color="primary">Registrar Cita</button>
+                        <button routerLink="/editar_cita" style="margin-left:20px;" mat-raised-button color="primary">Editar Cita</button>
+                        <button routerLink="/eliminar_cita" style="margin-left:20px;" mat-raised-button color="primary">Eliminar Cita</button>
+                    </div>
+
+                </form>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

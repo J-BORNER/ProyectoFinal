@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Citas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://conteudo.imguol.com.br/c/entretenimento/3e/2020/04/28/medica-fechando-portas-1588082119801_v2_450x450.jpg'); /* Reemplaza esta URL con la URL real de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Great Vibes', cursive;
+        }
+        .bootstrap-wrapper {
+            background-color: rgba(197, 128, 128, 0.8); /* Opcional: Para hacer un fondo blanco semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row mt20">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Inicio de Sesión</h1>
+                <form action="">
+                    <div class="text-center">
+                    <mat-form-field class="width-50" appearance="outline">
+                    <mat-label>Usuario</mat-label>
+                    <input matInput placeholder="Ingrese su usuario" style="color:black;">
+                    <mat-hint>El nombre del usuario debe ser válido</mat-hint>
+                    </mat-form-field>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="text-center">
+                    <mat-form-field class="width-50" appearance="outline">
+                        <mat-label>Contraseña</mat-label>
+                        <input type="password" matInput placeholder="Ingrese su contraseña" style="color:black;">
+                        <mat-hint>La contraseña debe ser válida</mat-hint>
+                    </mat-form-field>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="container text-center">
+                        <button mat-raised-button color="primary">Iniciar Sesión</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

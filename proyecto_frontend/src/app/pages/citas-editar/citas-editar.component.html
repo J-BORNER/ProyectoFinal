@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>///////////////////////</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://images.ecestaticos.com/i1yfTH8J5NL-IQpMhVFZ1CxC4co=/0x87:1696x1042/1338x752/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F09b%2F3b8%2Fe0a%2F09b3b8e0ab9fad6d987de608e80318d6.jpg'); /* Reemplaza esta URL con la URL real de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Great Vibes', cursive;
+        }
+        .bootstrap-wrapper {
+            background-color: rgba(82, 42, 101, 0.8); /* Opcional: Para hacer un fondo blanco semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Edición de Citas</h1>
+                <form (ngSubmit) = "formSubmit()">
+                    <div class="text-center">
+                        <mat-form-field class="width-50"  appearance="outline">
+                            <mat-label>ID</mat-label>
+                            <input type="text" [(ngModel)] = "cita.id" name="id"  matInput placeholder="Ingrese el id de la cita" style="color:black;">
+                        </mat-form-field>
+                        </div>
+                        <br>
+                    <div class="text-center">
+                    <mat-form-field class="width-50"  appearance="outline">
+                        <mat-label>Fecha y Hora</mat-label>
+                        <input type="text" [(ngModel)] = "cita.fechayhora" name="fechayhora" matInput placeholder="Ingrese la Fecha y hora" style="color:black;">
+                    </mat-form-field>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                    <mat-form-field class="width-50"  appearance="outline">
+                        <mat-label>ID del Paciente</mat-label>
+                        <input type="text" [(ngModel)] = "cita.paciente_id" name="paciente_id"  matInput placeholder="Ingrese el id del paciente" style="color:black;">
+                    </mat-form-field>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <mat-form-field class="width-50" appearance="outline">
+                            <mat-label>ID del Médico</mat-label>
+                            <input type="text" [(ngModel)] = "cita.medico_id" name="medico_id"  matInput placeholder="Ingrese el id del médico" style="color:black;">
+                        </mat-form-field>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <mat-form-field class="width-50" appearance="outline">
+                            <mat-label>Estado de la Cita</mat-label>
+                            <input type="text" [(ngModel)] = "cita.estado_cita" name="estado_cita"  matInput placeholder="Ingrese el estado de la cita" style="color:black;">
+                        </mat-form-field>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="container text-center">
+                        <button mat-raised-button color="primary">Actualizar Cita</button>
+                    </div>
+                </form>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Citas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://homomedicus.com/wp-content/uploads/2022/06/tu-has-elegido-ser-medico-pero-el-no-ha-elegido-ser-paciente-9731.webp'); /* Reemplaza esta URL con la URL real de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Great Vibes', cursive;
+        }
+        .bootstrap-wrapper {
+            background-color: rgba(176, 200, 147, 0.8); /* Opcional: Para hacer un fondo blanco semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top:20px;">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Administración de Pacientes</h1>
+                <form>
+                    <br>
+                    <table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
+                        <ng-container matColumnDef="id">
+                            <th mat-headet-cell *matHeaderCellDef> ID </th>
+                            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="nombre">
+                            <th mat-headet-cell *matHeaderCellDef> NOMBRE </th>
+                            <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="direccion">
+                            <th mat-headet-cell *matHeaderCellDef> DIRECCIÓN </th>
+                            <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
+                        </ng-container>
+                        <ng-container matColumnDef="edad">
+                            <th mat-headet-cell *matHeaderCellDef> EDAD</th>
+                            <td mat-cell *matCellDef="let element"> {{element.edad}} </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef = "displayColumn"></tr>
+                        <tr mat-row *matRowDef = "let row; columns: displayColumn;"></tr>
+
+                    </table>
+                    <br>
+                    <br>
+                    <div class="container text-center">
+                        <button routerLink="/registro_paciente" mat-raised-button color="primary">Registrar Paciente</button>
+                        <button routerLink="/editar_paciente" style="margin-left:20px;" mat-raised-button color="primary">Editar Paciente</button>
+                        <button routerLink="/eliminar_paciente" style="margin-left:20px;" mat-raised-button color="primary">Eliminar Paciente</button>
+                    </div>
+                </form>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
